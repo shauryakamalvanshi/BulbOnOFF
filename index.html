@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Bulb</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: black;
+        }
+        #myHead{
+            text-align: center;
+        }
+
+        .mainbody{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 20px;
+        }
+        button{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myHead">
+    <h1>Turn On the light</h1>
+    </div>
+    <div class="mainbody">
+
+    <button onclick="bulbOn()" >turn on the bulb</button>
+    <img src="offbulb.png" alt="" id="myImage">
+    <button onclick="bulbOff()">turn off the light</button>
+</div>
+</body>
+<script>
+    
+    function bulbOn(){
+        var myimg=document.getElementById('myImage').src='onbulb.png';
+        document.getElementById('myHead').innerHTML="<h1>Turn off the light</h1>"
+        document.body.style.background= "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(69,146,86,1) 44%, rgba(71,143,69,1) 54%, rgba(3,3,27,1) 98%)";
+       
+    }
+    function bulbOff(){
+        document.getElementById('myImage').src='offbulb.png'
+        document.getElementById('myHead').innerHTML="<h1>Turn on the light</h1>"
+        document.body.style.background="black";
+    }
+</script>
+</html>
